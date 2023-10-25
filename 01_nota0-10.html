@@ -6,10 +6,13 @@
     */
 
     //Entrada
-
+    let mensagem = prompt(`Informe uma nota entre 1 e 10`)
 
     //Processamento
-
+   while (mensagem < 1 || mensagem > 10 || isNaN(mensagem)) {
+        alert(`VALOR INVÁLIDO!`)
+        mensagem = prompt(`Informe uma nota entre 1 e 10`)
+    } 
 
     //Saída
 

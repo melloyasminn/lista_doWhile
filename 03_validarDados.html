@@ -11,8 +11,31 @@
     */
 
     //Entrada
-
-
+    let nome=prompt(`Informe seu nome (maior que 3 caracteres)`)
+    while(nome.length<3){
+        alert(`ERRO`)
+        nome=prompt(`Informe seu nome (maior que 3 caracteres)`)
+    }
+    let idade=prompt(`Informe sua idade (entre 0 e 150)`)
+    while( idade<0 || idade>150){
+        alert(`ERRO`)
+        idade=prompt(`Informe sua idade (entre 0 e 150)`)
+    }
+    let salario=prompt(`Qual seu salário? ( maior que zero)`)
+    while(salario<=0){
+        alert(`ERRO`)
+        salario=prompt(`Qual seu salário? ( maior que zero)`)
+    }
+    let sexo=prompt(`Qual seu sexo? F-feminino M-masculino`).toUpperCase()
+    while( sexo!="F" || sexo!= "M"){
+        alert(`ERRO`)
+        sexo=prompt(`Qual seu sexo? F-feminino M-masculino`).toUpperCase()
+    }
+    let estadoCivil=prompt(`Qual seu estado civil? S-solteiro C-casado V-viúvo D-divorciado`).toUpperCase()
+    while(estadoCivil != "S" || estadoCivil!="C"||estadoCivil!="V"|| estadoCivil!="D"){
+        alert(`ERRO`)
+        estadoCivil=prompt(`Qual seu estado civil? S-solteiro C-casado V-viúvo D-divorciado`).toUpperCase()
+    }
     //Processamento
 
 

@@ -6,11 +6,18 @@
     */
 
     //Entrada
-
-
+    //pais A 800000 - 3% ao ano
+    //pais B 200000 - 1.5% ao ano
+    let paisA = 80000
+    let paisB = 200000
+    let anos = 0
     //Processamento
-
+    do{
+        paisA = paisA + (paisA*0.03)
+        paisB = paisB + (paisB*0.015)
+        anos++
+    } while(paisA <= paisB)
 
     //Saída
-
+    alert(`Serão necessários ${anos} anos \nPaís A após ${anos} anos: ${paisA.toFixed(0)} \nPaís B após ${anos} anos ${paisB.toFixed(0)}`)
 </script>

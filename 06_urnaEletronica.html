@@ -20,13 +20,22 @@
     */
 
     //Entrada
-
-
+    let joaozinho = 0
+    let mariazinha = 0
+    let nulo = 0
+    let branco = 0
+    let voto = 0
     //Processamento
-
-
+    do {
+        voto = prompt(`As opções são:
+    \n1. Candidato Joãozinho \n2. Candidato Mariazinha \n3. Nulo \n4. Branco \n0. Finalizar programa`);
+        (voto == 1) ? joaozinho = joaozinho + 1 : (voto == 2) ? mariazinha = mariazinha + 1 : (voto == 3) ? nulo = nulo + 1 : (voto == 4) ? branco = branco + 1 : (voto == 0) ? "" : alert(`Candidato inválido!`);
+    } while (voto != 0)
+    let porcentagem = (joaozinho + mariazinha + nulo + branco) / 100;
     //Saída
-
+    alert(`Número de votos de cada candidato:
+    \nJoãozinho: ${joaozinho} \nMariazinha: ${mariazinha} \nNulo: ${nulo} \nBranco: ${branco}`)
+    alert(`Porcentagem de votos nulos: ${nulo / porcentagem}% \nPorcentagem de votos em branco:  ${branco / porcentagem}%`)    
+    let vencedor = (joaozinho > mariazinha) ? `Joãozinho` : (mariazinha > joaozinho) ? `Mariazinha` : `empate`;
+    alert(`Candidato vencedor: ${vencedor}`)
 </script>
-
-

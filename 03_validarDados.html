@@ -27,12 +27,12 @@
         salario=prompt(`Qual seu salário? ( maior que zero)`)
     }
     let sexo=prompt(`Qual seu sexo? F-feminino M-masculino`).toUpperCase()
-    while( sexo!="F" || sexo!= "M"){
+    while( sexo!= "F" && sexo!= "M"){
         alert(`ERRO`)
         sexo=prompt(`Qual seu sexo? F-feminino M-masculino`).toUpperCase()
     }
     let estadoCivil=prompt(`Qual seu estado civil? S-solteiro C-casado V-viúvo D-divorciado`).toUpperCase()
-    while(estadoCivil != "S" || estadoCivil!="C"||estadoCivil!="V"|| estadoCivil!="D"){
+    while(estadoCivil != "S" && estadoCivil!="C"&&estadoCivil!="V"&& estadoCivil!="D"){
         alert(`ERRO`)
         estadoCivil=prompt(`Qual seu estado civil? S-solteiro C-casado V-viúvo D-divorciado`).toUpperCase()
     }

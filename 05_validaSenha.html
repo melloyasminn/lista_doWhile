@@ -6,11 +6,19 @@
     */
 
     //Entrada
+    let senha = Number(prompt(`Informe uma senha com 4  números inteiros`))
 
-
+    while (senha.toString().length != 4 || isNaN(senha)) {
+        senha = prompt(`Insira uma senha com 4 NÚMEROS inteiros`);
+    }
     //Processamento
-
-
+    let confirmar = prompt(`Insira a sua senha novamente`)
+    if (senha != confirmar)
+        alert(`Senha incorreta!`);
+    else {
+        alert(`Senha correta.`);
+    }
+    
     //Saída
 
 </script>

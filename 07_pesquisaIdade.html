@@ -12,12 +12,23 @@
     Finalize a entrada de dados ao ser digitada uma idade negativa.
     */
 
-    //Entrada
-
-
+     //Entrada
+     let sexo = []
+     let salario = []
+     let idade = []
     //Processamento
-
-
+    do{
+        let perguntaIdade = Number(prompt(`Qual a sua idade`))
+        if(perguntaIdade < 0) break;
+        let perguntasexo = prompt(`Qual o seu sexo? F-feminino M-masculino`).toUpperCase()
+        let perguntasalario = Number(prompt(`Qual o seu salário`).replace(',', '.'))
+        idade.push(perguntaIdade)
+        sexo.push(perguntasexo)
+        salario.push(perguntasalario)
+    }while (true);
+    alert("A média dos salários do grupo: " + (salario.reduce((a, b) => a + b, 0) / salario.length).toFixed(2).replace(".",",") + "\nA maior idade do grupo: " + Math.max(...idade) + "\nA menor idade do grupo: " + Math.min(...idade) + "\nA quantidade de mulheres na região: " + sexo.filter(x => x == 'F').length + "\nA idade e o sexo da pessoa que possui o menor salário: " + idade[salario.indexOf(Math.min(...salario))] + " " + sexo[salario.indexOf(Math.min(...salario))])
     //Saída
+
+</script>
 
 </script>
